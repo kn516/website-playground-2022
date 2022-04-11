@@ -93,6 +93,10 @@
         https://getbootstrap.com/docs/5.0/forms/overview/
       -->
 
+      <div id="my-container">
+        <p id="my-message">some placeholder content</p>
+      </div>
+      
       <form class="mx-auto" style="max-width: 350px; margin-top:2em;">
         <h3>My Form</h3>
 
@@ -180,5 +184,42 @@
         console.log("Thanks for the page visit!")
 
     </script>
+
+<script type="text/javascript">
+
+    // select elements from the DOM by specifying their unique identifiers:
+    //var myDiv = document.getElementById("my-container")
+    var myParagraph = document.getElementById("my-message")
+
+    console.log(myParagraph.innerText)
+   
+  
+  </script>
+
+  <script>
+      //
+// FORM SUBMIT
+//
+
+var submitButton = document.getElementById("my-button")
+var emailInput = document.getElementById("my-email")
+//var passwordInput = document.getElementById("my-password")
+// etc...
+
+function handleSubmit(event) {
+  event.preventDefault() // because our button happens to be in a form, we prevent the default form action that would be triggered when the form is submitted
+
+  console.log("---------------------")
+  console.log("FORM SUBMIT...")
+  console.log("EMAIL:", emailInput.value)
+  //console.log("PASSWORD:", passwordInput.value)
+  // etc...
+}
+
+
+
+submitButton.addEventListener("click", handleSubmit)
+  </script>
+
   </body>
 </html>
